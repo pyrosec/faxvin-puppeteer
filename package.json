@@ -1,0 +1,22 @@
+{
+  "name": "faxvin-puppeteer",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "faxvin": "./bin/faxvin.js"
+  },
+  "dependencies": {
+    "base-puppeteer": "https://github.com/pyrosec/base-puppeteer",
+    "puppeteer-extra-plugin-recaptcha": "^3.6.8",
+    "querystring": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "nice-repl": "^0.1.2",
+    "typescript": "^5.0.4"
+  }
+}
