@@ -108,8 +108,8 @@ export class FaxvinPuppeteer extends BasePuppeteer {
   }
 }
 
-export const lookupPlate = async ({ plate, state }) => {
-  const fv = await FaxvinPuppeteer.initialize() as FaxvinPuppeteer;
+export const lookupPlate = async ({ plate, state, noSandbox }) => {
+  const fv = await FaxvinPuppeteer.initialize({ noSandbox }) as FaxvinPuppeteer;
   const result = await fv.searchPlate({ plate, state });
   fv.close()
   return result;

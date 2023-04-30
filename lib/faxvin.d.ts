@@ -42,9 +42,10 @@ export declare class FaxvinPuppeteer extends BasePuppeteer {
     }>;
     close(): Promise<void>;
 }
-export declare const lookupPlate: ({ plate, state }: {
+export declare const lookupPlate: ({ plate, state, noSandbox }: {
     plate: any;
     state: any;
+    noSandbox: any;
 }) => Promise<{
     vin: any;
     make: any;
