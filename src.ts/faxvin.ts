@@ -72,6 +72,7 @@ export class FaxvinPuppeteer extends BasePuppeteer {
     await page.waitForNetworkIdle();
     await this.solveCaptchas();
     await this.timeout({ n: 500 });
+    if (await this._page.evaluate(() => Boolean((document as any).querySelector('tbody')))) return await this.extractData();
     await this.click({ selector: 'button' });
     await this.waitForNavigation();
     await page.waitForSelector('tbody');
